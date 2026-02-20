@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishratjahan M. Afzal Khazi | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body class="antialiased">
+    <!-- Custom Cursor Elements -->
+    <div id="custom-cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Certificate Modal -->
+    <div id="imageModal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-lg flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <button id="closeModal" class="absolute top-6 right-6 text-white p-3 glass-card rounded-full hover:bg-white/10 transition-all z-[110]">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <div class="max-w-5xl max-h-[90vh] p-4 flex items-center justify-center">
+            <img id="modalImage" src="" alt="Full Certificate" class="w-auto h-auto max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl ring-1 ring-white/10">
+        </div>
+    </div>
+
+    <div class="glow-mesh"></div>
+
+    <!-- Navigation -->
+   <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center transition-all duration-300" id="navbar">
+        <div class="flex items-center space-x-3">
+            <div class="relative group cursor-pointer" onclick="window.location.href='#home'">
+                <div class="absolute -inset-1 bg-gradient-to-r from-violet-600 to-cyan-400 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                <img src="asset/ijk.jpeg" 
+                     alt="Ishrat Logo" 
+                     onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=100'"
+                     class="relative w-9 h-9 rounded-full object-cover border border-white/20 grayscale-[20%] group-hover:grayscale-0 transition-all">
+            </div>
+            
+            <div class="text-lg font-bold tracking-tighter uppercase cursor-default">
+                ISHRAT <span class="text-cyan-400 font-extrabold ml-1">JAHAN</span>
+            </div>
+        </div>
+    <div class="hidden md:flex items-center space-x-8 text-[13px] font-medium text-gray-400">
+    <a href="#home" class="hover:text-white transition-colors">Home</a>
+    <a href="#about" class="hover:text-white transition-colors">About</a>
+    <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+    <a href="#projects" class="hover:text-white transition-colors">Work</a>
+    <a href="#hobbies" class="hover:text-white transition-colors">Hobbies</a> 
+    <a href="#contact" class="px-4 py-1.5 glass-card rounded-full text-white border-violet-500/30 hover:bg-violet-600/20 transition-all">Let's Talk</a>
+    </div>
+        <button class="md:hidden text-white p-2 glass-card rounded-lg" id="menuBtn">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black/95 z-[60] flex flex-col items-center justify-center space-y-8 text-xl hidden opacity-0 transition-opacity duration-300">
+    <button class="absolute top-6 right-6 p-2 glass-card rounded-full" id="closeMenu"><i data-lucide="x"></i></button>
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Work</a>
+    <a href="#hobbies" class="mobile-link">Hobbies</a>
+    <a href="#contact" class="mobile-link text-violet-400">Contact</a>
+</div>
+
+    <!-- Hero Section -->               
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 pt-20">
+        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 reveal active">
+                <div class="flex space-x-3 mb-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-[10px] font-semibold">
+                        <span class="relative flex h-1.5 w-1.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-violet-500"></span>
+                        </span>
+                        <span>Available for Internships</span>
+                    </div>
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] font-semibold">
+                        <span class="relative flex h-1.5 w-1.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-cyan-500"></span>
+                        </span>
+                        <span>Open to work</span>
+                    </div>
+                </div>
+
+               <h1 class="text-4xl lg:text-6xl font-extrabold mb-4 leading-tight">
+    Innovating as a <br>
+    <span id="typewriter" class="text-2xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400"></span>
+    <span class="cursor h-5 lg:h-8"></span>
+</h1>
+                <p class="text-gray-400 text-lg lg:text-xl mb-8 max-w-lg leading-relaxed">
+                    Hello, I'm <span class="text-white font-medium">Ishratjahan Mohammed Afzal Khazi</span> <br>
+                Where aesthetic frontend meets actionable intelligence.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="px-6 py-3 bg-violet-600 hover:bg-violet-500 rounded-lg text-sm font-bold shadow-lg shadow-violet-600/20 transition-all flex items-center group">
+                        View Projects <i data-lucide="arrow-right" class="ml-2 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="Ishratjahan_CV.pdf" download="Ishratjahan_CV.pdf" class="px-6 py-3 glass-card rounded-lg text-sm font-bold flex items-center hover:bg-white/5 transition-all">
+                        <i data-lucide="download" class="mr-2 w-3.5 h-3.5"></i> Download CV
+                    </a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center reveal active">
+                <div class="hero-img-orb float-anim shadow-2xl shadow-violet-500/20">
+                    <img src="asset/ijk.jpeg" 
+                         alt="Ishratjahan Profile" 
+                         onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=1000'"
+                         class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Bento Section -->
+    <section id="about" class="py-20 px-6 bg-white/[0.01]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold mb-10 flex items-center">
+                <i data-lucide="user" class="mr-3 text-violet-500 w-5 h-5"></i> About Me
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="md:col-span-2 glass-card p-7 rounded-2xl reveal reveal-left">
+                    <h3 class="text-lg font-bold mb-3">Academic Journey</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6 text-[14px]">
+                        Currently pursuing a <strong class="text-white">B.E. in Computer Science Engineering</strong> at Moodlakatte Institute of Technology, Kundapura (Class of 2027). I specialize in creating software that is both visually striking and mathematically sound. My goal is to use data-driven intelligence to solve complex real-world challenges.
+                    </p>
+                    <div class="flex space-x-6">
+                        <div>
+                            <span class="text-2xl font-bold text-violet-400">2027</span>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Graduation Year</p>
+                        </div>
+                        <div class="w-px h-10 bg-white/10"></div>
+                        <div>
+                            <span class="text-2xl font-bold text-cyan-400">15+</span>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Certifications Done</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-7 rounded-2xl flex flex-col justify-center items-center text-center reveal reveal-right">
+                    <div class="w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center mb-4">
+                        <i data-lucide="heart" class="text-cyan-400 w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold mb-2 text-base">My Passion</h3>
+                    <p class="text-[13px] text-gray-400">Passionate about Web Design, Data Analytics, and solving logic puzzles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div class="reveal">
+                    <h2 class="text-2xl font-bold mb-1">Technical Toolbox</h2>
+                    <p class="text-[14px] text-gray-500">Core technologies I use to bring ideas to life.</p>
+                </div>
+                <div class="flex space-x-2 reveal">
+                    <span class="px-3 py-1 rounded-full border border-white/10 text-[10px] text-gray-400">Dev</span>
+                    <span class="px-3 py-1 rounded-full border border-white/10 text-[10px] text-gray-400">Data</span>
+                    <span class="px-3 py-1 rounded-full border border-white/10 text-[10px] text-gray-400">Design</span>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+                <!-- Development Skills -->
+                <div class="glass-card p-7 rounded-2xl reveal">
+                    <h3 class="font-bold mb-5 flex items-center text-base"><i data-lucide="code" class="mr-2 w-4 h-4 text-violet-500"></i> Development</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1 text-xs"><span class="text-gray-300">HTML/CSS/JS</span><span>90%</span></div>
+                            <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="skill-bar-fill h-full bg-violet-500" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1 text-xs"><span class="text-gray-300">C++</span><span>85%</span></div>
+                            <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="skill-bar-fill h-full bg-violet-500" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1 text-xs"><span class="text-gray-300">C Language</span><span>80%</span></div>
+                            <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="skill-bar-fill h-full bg-violet-500" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1 text-xs"><span class="text-gray-300">Node.js / Express</span><span>65%</span></div>
+                            <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="skill-bar-fill h-full bg-violet-500" data-width="65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analysis Skills -->
+                <div class="glass-card p-7 rounded-2xl reveal">
+                    <h3 class="font-bold mb-5 flex items-center text-base"><i data-lucide="pie-chart" class="mr-2 w-4 h-4 text-cyan-400"></i> Data Analysis</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1 text-xs"><span class="text-gray-300">Power BI Dashboards</span><span>85%</span></div>
+                            <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="skill-bar-fill h-full bg-cyan-400" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1 text-xs"><span class="text-gray-300">Pandas</span><span>75%</span></div>
+                            <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="skill-bar-fill h-full bg-cyan-400" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1 text-xs"><span class="text-gray-300">Numpy</span><span>70%</span></div>
+                            <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="skill-bar-fill h-full bg-cyan-400" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1 text-xs"><span class="text-gray-300">MongoDB / SQL</span><span>60%</span></div>
+                            <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="skill-bar-fill h-full bg-cyan-400" data-width="60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expertise Section -->
+                <div class="glass-card p-7 rounded-2xl reveal bg-gradient-to-br from-violet-900/10 to-transparent">
+                    <h3 class="font-bold mb-5 text-base">Expertise Areas</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-[13px] text-gray-400"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-green-500 mr-2.5"></i> Website Frontend Design</li>
+                        <li class="flex items-center text-[13px] text-gray-400"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-green-500 mr-2.5"></i> Custom UI Templates</li>
+                        <li class="flex items-center text-[13px] text-gray-400"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-green-500 mr-2.5"></i> AI-Based Image Recognition</li>
+                        <li class="flex items-center text-[13px] text-gray-400"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-green-500 mr-2.5"></i> Technical Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold mb-10 reveal">Featured Work</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsGrid">
+                <!-- Project 1 (Visible) -->
+                <div class="group reveal">
+                    <div class="relative overflow-hidden rounded-2xl glass-card aspect-video mb-5">
+                        <div class="absolute inset-0 bg-violet-600/20 group-hover:bg-violet-600/0 transition-all duration-500 z-10"></div>
+                        <img src="asset/p1.png" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="bg-violet-600 px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase">Web Application</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1 group-hover:text-violet-400 transition-colors">Code Visualizer</h3>
+                    <p class="text-gray-400 text-[12px] mb-3 leading-relaxed">Sophisticated learning platform to visualize GCC compiler logic in real-time. Built with Node.js and MongoDB.</p>
+                    <div class="flex flex-wrap gap-1.5 text-[9px]">
+                        <span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">HTML</span>
+                        <span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">CSS</span>
+                        <span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">JS</span>
+                        <span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">GCC</span>
+                        <span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">MongoDB</span>
+                        <span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">Node.js</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Visible) -->
+                <div class="group reveal">
+                    <div class="relative overflow-hidden rounded-2xl glass-card aspect-video mb-5">
+                        <div class="absolute inset-0 bg-cyan-600/20 group-hover:bg-cyan-600/0 transition-all duration-500 z-10"></div>
+                        <img src="asset/p2.png" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="bg-cyan-600 px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase">AI / ML System</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1 group-hover:text-cyan-400 transition-colors">Doodle AI Recognition</h3>
+                    <p class="text-gray-400 text-[12px] mb-3 leading-relaxed">Real-time object detection for hand-drawn sketches using advanced pattern recognition algorithms.</p>
+                    <div class="flex flex-wrap gap-1.5 text-[9px]">
+                        <span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">Python</span>
+                        <span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">TensorFlow</span>
+                        <span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">ML</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 (Visible) -->
+
+                <div class="group reveal">
+                    <div class="relative overflow-hidden rounded-2xl glass-card aspect-video mb-5">
+                        <div class="absolute inset-0 bg-indigo-600/20 group-hover:bg-indigo-600/0 transition-all duration-500 z-10"></div>
+                        <img src="asset/p3.png" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="bg-indigo-600 px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase">AI Interface</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1 group-hover:text-indigo-400 transition-colors">AI Gesture Controller</h3>
+                    <p class="text-gray-400 text-[12px] mb-3 leading-relaxed">Gesture-based PPT/PDF control system using high-precision hand tracking and motion prediction.</p>
+                    <div class="flex flex-wrap gap-1.5 text-[9px]">
+                        <span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">Python</span>
+                        <span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">MediaPipe</span>
+                    </div>
+                </div>
+
+                <!-- Hidden Project 4 -->
+                <div class="group reveal hidden more-project">
+                    <div class="relative overflow-hidden rounded-2xl glass-card aspect-video mb-5">
+                        <div class="absolute inset-0 bg-pink-600/20 group-hover:bg-pink-600/0 transition-all duration-500 z-10"></div>
+                        <img src="asset/P4.png" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="bg-pink-600 px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase">Website</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1 group-hover:text-pink-400 transition-colors">The Next Evolution</h3>
+                    <p class="text-gray-400 text-[12px] mb-3 leading-relaxed">ecommerce website with advanced UI/UX design and responsive layout.</p>
+                </div>
+
+                <!-- Hidden Project 5 -->
+                <div class="group reveal hidden more-project">
+                    <div class="relative overflow-hidden rounded-2xl glass-card aspect-video mb-5">
+                        <div class="absolute inset-0 bg-orange-600/20 group-hover:bg-orange-600/0 transition-all duration-500 z-10"></div>
+                        <img src="asset/5.png" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="bg-orange-600 px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase">API Integration</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1 group-hover:text-orange-400 transition-colors">Weather Hub</h3>
+                    <p class="text-gray-400 text-[12px] mb-3 leading-relaxed">Dynamic dashboard featuring geo-location tracking and multi-city meteorological syncing.</p>
+                </div>
+
+                <!-- Hidden Project 6 -->
+                <div class="group reveal hidden more-project">
+                    <div class="relative overflow-hidden rounded-2xl glass-card aspect-video mb-5">
+                        <div class="absolute inset-0 bg-green-600/20 group-hover:bg-green-600/0 transition-all duration-500 z-10"></div>
+                        <img src="asset/6.png" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="bg-green-600 px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase">Software Dev</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1 group-hover:text-green-400 transition-colors">Task Optimizer</h3>
+                    <p class="text-gray-400 text-[12px] mb-3 leading-relaxed">Cross-platform task management system focusing on productivity metrics and time-blocking.</p>
+                </div>
+            </div>
+
+            <!-- Show More Button for Projects -->
+            <div class="mt-10 text-center reveal">
+                <button id="toggleProjectsBtn" class="px-6 py-2 glass-card rounded-full font-bold text-xs text-gray-300 hover:text-white transition-all flex items-center mx-auto space-x-2">
+                    <span id="projBtnText">Show More</span>
+                    <i data-lucide="chevron-down" id="projBtnIcon" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certifications Section -->
+    <section id="certifications" class="py-20 px-6 bg-violet-600/5">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold mb-10 text-center reveal">Achievements & Certifications</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="certGrid">
+                <!-- Visible Card 1: TCS -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal reveal-left cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\1.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-violet-400 border border-violet-500/30 uppercase">MICROSOFT</div>
+                        
+                    </div>
+                    
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">AINNOVATION 2025_II Code4Bharat</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">HACKTHON- Specialized training on data analysis techniques and visualization tools.</p>
+                    </div>
+                </div>
+
+                <!-- Visible Card 2: Infosys Pragathi -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\2.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-cyan-400 border border-cyan-500/30 uppercase">IBM</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">DATATHON</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">IBM Z Datathon 2025 – A Global Datathon Event, hosted by Shooting Stars Foundation and powered by IBM, held at Global Academy of Technology, Bangalore!.</p>
+                    </div>
+                </div>
+
+                <!-- Visible Card 3: Infosys Python -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal reveal-right cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\3.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-gray-400 border border-white/10 uppercase">JK Tyre </div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Buddy4study</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">JK Tyres Shiksha Sarthi schlorship .</p>
+                    </div>
+                </div>
+
+                <!-- Hidden Card 4: Google -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\4.png" class="w-full h-full object-co4ver transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-violet-400 border border-violet-500/30 uppercase">MONGODB</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Rest Coder Academy</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">A workshop on MongoDB, conducted by Rest Coder Academy on 16th & 17th October 2025.</p>
+                    </div>
+                </div>
+
+                <!-- Hidden Card 5: Letter of Appreciation -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\5.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-green-400 border border-green-500/30 uppercase">INFOSYS</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Infosys</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed"> part of the INFOSYS Pragati Path to Future Program. COHORT 6 .</p>
+                    </div>
+                </div>
+
+                 <!-- Hidden Card 6: Google -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\6.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-violet-400 border border-violet-500/30 uppercase">TATA </div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Data Visualisation</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed"> Tata Group's Data Visualisation: Empowering Business with Effective Insights on @[Forage](urn:li:organization:68514998).</p>
+                    </div>
+                </div>
+
+                <!-- Hidden Card 7: Letter of Appreciation -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\7.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-green-400 border border-green-500/30 uppercase">COURSERA</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">COURSERA</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">Google Data Analytics Professional Certificate.</p>
+                    </div>
+                </div>
+
+                 <!-- Hidden Card 8: Google -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\8.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-violet-400 border border-violet-500/30 uppercase">IBM</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Data Science Orientation</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">IBM Data Science Professional Certificate.</p>
+                    </div>
+                </div>
+
+                <!-- Hidden Card 9: Letter of Appreciation -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\9.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-green-400 border border-green-500/30 uppercase">HP</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Business Email</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">I’m happy to have successfully completed the HP LIFE "Business Email" online course.</p>
+                    </div>
+                </div>
+
+                 <!-- Hidden Card 10: Google -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\10.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-violet-400 border border-violet-500/30 uppercase">hp</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Agile Project Management</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed"> HP LIFE "Agile Project Management" online course.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\23.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-green-400 border border-green-500/30 uppercase">hp</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Data Science & Analytics</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">I’m thrilled to have successfully completed the HP LIFE "Data Science & Analytics" online course.</p>
+                    </div>
+                </div>
+
+
+                <!-- Hidden Card 11: Letter of Appreciation -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\11.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-green-400 border border-green-500/30 uppercase">Social</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Appreciation Letter (2025)</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">Appreciation from The Concerned for Working Children (CWC) for my contribution during their Summer Camp (14.04.2025 – 14.05.2025).</p>
+                    </div>
+                </div>
+               
+                <!-- Hidden Card 12: Google -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden borde8o0--7yuyuuyuywr-b border-white/5">
+                        <img src="asset\12.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-violet-400 border border-violet-500/30 uppercase">MITK</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Appreciation</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed"> I received a Certificate of Appreciation from Moodlakatte Institute of Technology (MIT), Kundapura for actively serving as a Student Coordinator during the First Year Induction Programme – September 2025.</p>
+                    </div>
+                </div>
+
+                <!-- Hidden Card 13: Letter of Appreciation -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\13.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-green-400 border border-green-500/30 uppercase">udemy</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Microsoft Excel</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">I'm really enjoying this course on Udemy and think you might like it too.
+                        https://lnkd.in/gr-EpzTv Celebrating my new certification! Udemy.</p>
+                        
+                    </div>
+                </div>
+
+                 <!--Hidden Card 14: Google -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\14.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-violet-400 border border-violet-500/30 uppercase">Forage</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Industrial Engineer Job</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">I just completed Siemens Mobility's Operations Industrial Engineer on @[Forage](urn:li:organization:68514998). </p>
+                    </div>
+                </div>
+
+                <!--Hidden Card 15: Letter of Appreciation -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\15.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-green-400 border border-green-500/30 uppercase">cisco</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Python</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed"> Python Essentials 1 from Cisco.</p>
+                    </div>
+                </div>
+
+                <!--Hidden Card 16: Letter of Appreciation -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\16.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-green-400 border border-green-500/30 uppercase">hacker Rank</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">C#</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">Hacker rank C# (Basic) certificate 👍</p>
+                    </div>
+                </div>
+
+                <!-- Hidden Card 17: Google -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\17.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-violet-400 border border-violet-500/30 uppercase">Hacker rank</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">JAVA</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">Hacker rank JAVA (Basic) certificate 👍</p>
+                    </div>
+                </div>
+
+                <!-- Hidden Card 18: Letter of Appreciation -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\18.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-green-400 border border-green-500/30 uppercase"> my gov</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">NARCOTICS CONTROL BUREAU</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">MINISTRY OF AFFAIRS.</p>
+                    </div>
+                </div>
+
+                 <!-- Hidden Card 19: Google -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\19.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-violet-400 border border-violet-500/30 uppercase">NXT WAVE</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Generative AI</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">NXT WAVE - Certificate covering Generative AI fundamentals.</p>
+                    </div>
+                </div>
+
+                   <!-- Hidden Card 21: Letter of Appreciation -->
+                <div class="glass-card overflow-hidden rounded-2xl flex flex-col group cursor-pointer reveal hidden more-cert cert-item">
+                    <div class="relative h-40 w-full overflow-hidden border-b border-white/5">
+                        <img src="asset\21.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold text-green-400 border border-green-500/30 uppercase">COURSERA</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-[13px] font-bold mb-2">Microsoft</h4>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">Microsoft - Certificate for completing the Microsoft AI Fundamentals course.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center reveal">
+                <button id="toggleCertBtn" class="px-6 py-2 glass-card rounded-full font-bold text-xs text-gray-300 hover:text-white transition-all flex items-center mx-auto space-x-2">
+                    <span id="btnText">Show More</span>
+                    <i data-lucide="chevron-down" id="btnIcon" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+<!--hobbies-->
+    <section id="hobbies" class="py-20 px-6 overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold mb-10 reveal">Interests & Hobbies</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+            <div class="glass-card p-6 rounded-[2rem] text-center reveal hover:border-violet-500 transition-all">
+                <i data-lucide="palette" class="w-8 h-8 mx-auto mb-3 text-violet-400"></i>
+                <p class="font-bold text-sm">Drawing & Sketching</p>
+            </div>
+            <div class="glass-card p-6 rounded-[2rem] text-center reveal hover:border-cyan-400 transition-all" style="transition-delay: 100ms;">
+                <i data-lucide="mic-2" class="w-8 h-8 mx-auto mb-3 text-cyan-400"></i>
+                <p class="font-bold text-sm">Singing</p>
+            </div>
+            <div class="glass-card p-6 rounded-[2rem] text-center reveal hover:border-pink-400 transition-all" style="transition-delay: 200ms;">
+                <i data-lucide="scissors" class="w-8 h-8 mx-auto mb-3 text-pink-400"></i>
+                <p class="font-bold text-sm">Fashion Designing</p>
+            </div>
+            <div class="glass-card p-6 rounded-[2rem] text-center reveal hover:border-green-400 transition-all" style="transition-delay: 300ms;">
+                <i data-lucide="book-open" class="w-8 h-8 mx-auto mb-3 text-green-400"></i>
+                <p class="font-bold text-sm">Teaching</p>
+            </div>
+        </div>
+
+        <h3 class="text-xl font-bold mb-8 flex items-center reveal">
+            <i data-lucide="pencil" class="mr-2 w-5 h-5 text-violet-500"></i> Creative Gallery
+        </h3>
+        
+        <div class="relative group">
+            <div class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide no-scrollbar" style="scrollbar-width: none; -ms-overflow-style: none;">
+                
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h1.png" alt="Sketch 1" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 150ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h2.png" alt="Sketch 2" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 300ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h19.png" alt="Sketch 3" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 450ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h4.png" alt="Sketch 4" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 150ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h5.png" alt="Sketch 2" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 300ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h6.png" alt="Sketch 3" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 450ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h7.png" alt="Sketch 4" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                    <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 150ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h8.png" alt="Sketch 2" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 300ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h9.png" alt="Sketch 3" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 450ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h10.png" alt="Sketch 4" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 300ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h11.png" alt="Sketch 3" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 450ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h12.png" alt="Sketch 4" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 450ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h13.png" alt="Sketch 4" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 300ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h14.png" alt="Sketch 3" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 450ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h15.png" alt="Sketch 4" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 450ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h16.png" alt="Sketch 4" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 300ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h17.png" alt="Sketch 3" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 450ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h18.png" alt="Sketch 4" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 300ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h3.png" alt="Sketch 3" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[280px] md:w-[350px] snap-center reveal reveal-left cert-item" style="transition-delay: 450ms;">
+                    <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden group/item cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+                            <img src="asset/h20.png" alt="Sketch 4" class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                                <span class="text-[10px] uppercase tracking-widest font-bold px-4 py-2 glass-card rounded-full">Enlarge Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-4">
+                <div class="flex space-x-2 items-center text-gray-500 text-[10px] uppercase tracking-widest">
+                    <span>Scroll to explore</span>
+                    <i data-lucide="arrow-right" class="w-3 h-3 animate-bounce-x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Download CV CTA Section -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-card p-8 md:p-10 rounded-[2rem] relative overflow-hidden group reveal reveal-up">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-violet-600/10 rounded-full blur-3xl -mr-32 -mt-32 group-hover:bg-violet-600/20 transition-colors"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-2">Ready to see the full story?</h3>
+                        <p class="text-gray-400 text-[14px] max-w-sm">Download my resume to dive deeper into my technical experience and academic achievements.</p>
+                    </div>
+                    <a href="Ishratjahan_CV.pdf" download="Ishratjahan_CV.pdf" class="inline-flex items-center px-8 py-4 bg-white text-black font-extrabold rounded-xl text-sm hover:bg-violet-400 hover:text-white transition-all transform hover:scale-105 shadow-xl shadow-white/5 whitespace-nowrap group">
+                        <i data-lucide="file-text" class="mr-2 w-4 h-4"></i>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="reveal reveal-left">
+                    <h2 class="text-3xl font-bold mb-5">Let's work <span class="text-violet-500">together</span>.</h2>
+                    <p class="text-gray-400 mb-10 text-[15px]">I’m looking for new opportunities. Whether you have a question or just want to say hi, I’ll get back to you!</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 glass-card rounded-full flex items-center justify-center text-violet-400">
+                                <i data-lucide="mail" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <p class="text-[9px] text-gray-500 uppercase font-bold tracking-tighter">Email</p>
+                                <a href="mailto:ijkhazi4@gmail.com" class="text-base hover:text-violet-400 transition-colors">ijkhazi4@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 glass-card rounded-full flex items-center justify-center text-cyan-400">
+                                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <p class="text-[9px] text-gray-500 uppercase font-bold tracking-tighter">LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/ishrat-jahan-9250b5300/" target="_blank" class="text-base hover:text-cyan-400 transition-colors">ishrat-jahan</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 glass-card rounded-full flex items-center justify-center text-white">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <p class="text-[9px] text-gray-500 uppercase font-bold tracking-tighter">GitHub</p>
+                                <a href="https://github.com/Ishrat8424/Ishrat8424" target="_blank" class="text-base hover:text-gray-400 transition-colors">Ishrat8424</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+    <div class="w-10 h-10 glass-card rounded-full flex items-center justify-center text-pink-500">
+        <i data-lucide="instagram" class="w-4 h-4"></i>
+    </div>
+    <div>
+        <p class="text-[9px] text-gray-500 uppercase font-bold tracking-tighter">Instagram</p>
+        <a href="https://www.instagram.com/the_chill_true725/" target="_blank" class="text-base hover:text-pink-500 transition-colors">@the_chill_true725</a>
+    </div>
+</div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl reveal reveal-right">
+                    <form id="contactForm" action="https://formspree.io/f/mpqjjzkn" method="POST" class="space-y-5">
+    <div class="grid md:grid-cols-2 gap-5">
+        <div>
+            <label class="block text-[10px] font-bold uppercase text-gray-500 mb-1.5">Name</label>
+            <input type="text" name="name" required class="w-full bg-white/5 border border-white/10 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-violet-500 transition-all text-white" placeholder="John Doe">
+        </div>
+        <div>
+            <label class="block text-[10px] font-bold uppercase text-gray-500 mb-1.5">Email</label>
+            <input type="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-violet-500 transition-all text-white" placeholder="john@example.com">
+        </div>
+    </div>
+    <div>
+        <label class="block text-[10px] font-bold uppercase text-gray-500 mb-1.5">Message</label>
+        <textarea name="message" rows="3" required class="w-full bg-white/5 border border-white/10 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-violet-500 transition-all text-white" placeholder="Tell me about your project..."></textarea>
+    </div>
+    <button type="submit" id="submitBtn" class="w-full bg-violet-600 hover:bg-violet-500 text-white text-sm font-bold py-3 rounded-lg transition-all shadow-lg shadow-violet-600/10">
+        Send Message
+    </button>
+</form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-white/5 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-500 text-[12px]">
+            <p>© 2025 Ishratjahan Khazi. Built with Passion.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white">Privacy</a>
+                <a href="#" class="hover:text-white">Terms</a>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+https://github.com/Ishrat8424/ishrat_portfolio.git
+</html>
